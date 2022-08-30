@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <section>
+            <div class="hero min-h-screen" style="background-image: url(https://i.pinimg.com/originals/07/b4/27/07b427c6bfabfb5d663efaaf05392b0c.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello There,</h1>
+                    <h1 class="mb-5 text-5xl font-bold text-amber-800">Mobile Hunter</h1>
+                    <p class="mb-5 text-xl">
+                        Wanna buy mobile phone? Here We have all models of <span class="text-red-700">Apple</span>, <span class="text-red-700">Samsung</span> , <span class="text-red-700">Oppo</span> phones. Just select which mobile you like and Buy it.
+                    </p>
+                    <input id="search" type="text" placeholder="Search Your Favourite Brand" class="input input-bordered input-accent w-full max-w-xs" />
+                    <button onclick="input()" class="btn btn-accent">Search</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </header>
+    <main class="bg-slate-900">
+        <section>
+            <h1>
+                <div id="info-title" class="text-3xl text-center"></div>
+            </h1>
+            <div class="p-6">
+                <div id="loader" class="hidden">
+                    <div class="border-blue-300 shadow rounded-md p-4 max-w-screen max-h-screen w-full mx-auto">
+                        <div class="animate-pulse flex space-x-4">
+                          <div class="rounded-full bg-slate-700 h-10 w-10"></div>
+                          <div class="flex-1 space-y-6 py-1">
+                            <div class="h-2 bg-slate-700 rounded"></div>
+                            <div class="space-y-3">
+                              <div class="grid grid-cols-3 gap-4">
+                                <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                                <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                              </div>
+                              <div class="h-2 bg-slate-700 rounded"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div id="phone-container" class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Shoes!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div> -->
+                  
+                </div>
+            </div>
+        </section>
+        <!-- modal section  -->
+
+        <section>
+            <div id="card-modal">
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal ">
+                    <div id="modal-body" class="modal-box ">
+                        <!-- <div id="modal-img" class="flex justify-center"></div>
+                        <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+                        <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                        <div class="modal-action">
+                        <label for="my-modal" class="btn">Yay!</label>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="show-all" class="text-center hidden">
+            <button onclick="showAllBtn()" class="btn btn-primary ">Show All</button>
+        </section>
+    </main>
+
+   
+
+    <script src="./phone.js"></script>
+</body>
+</html>
